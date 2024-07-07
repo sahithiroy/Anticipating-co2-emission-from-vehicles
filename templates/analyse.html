@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+         
+		/* colors for page*/
+		 
+		html{
+			font-size: 60%;
+			/* overflow: hidden; */
+			color:white;
+		}
+		/* this is body design */
+		 
+		 
+		 
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: Century Gothic;
+		}
+		 
+		ul{
+			float:right;
+			list-style-type: none;
+			margin-top: 30px;
+			margin-right:60px ;
+		}
+		ul li{
+			display: inline-block;
+		}
+		ul li a{
+			text-decoration: none;
+	        color: #f5f1f1;
+	        padding: 5px 20px;
+	        border: 1px solid transparent;
+	        transition: 0.5s ease;
+		}
+		ul li a{
+			text-decoration: none;
+	        color: #f5f1f1;
+			padding: 5px 20px;
+			border: 1px solid transparent;
+			transition: 0.5s ease;
+		}
+		ul li a:hover{
+			background-color: #f4f3f3;
+			color: #000;
+		}
+		ul li.active a{
+			background-color:#fff;
+	        color: #000;
+		}
+       body{
+        background-color: black;
+       }
+       .images{
+            display: flex;
+            flex-wrap: wrap;
+            height: 50px;
+            /* background-color: rgb(255, 255, 255); */
+            
+        }
+		.images .tab{
+			width:500px;
+			height:500px;
+			display: inline-block;
+			margin-top:20px; /*to have the space above the image*/
+           margin-bottom:20px;
+		   margin-left:10px;
+		   margin-right:10px;
+		   margin: 40px;
+		   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+		}
+		.images .tab img{
+			flex: 1 400px; width: 500px; height: 400px; padding: 20px;
+			  /* Add a border with a color */
+           transition: transform 0.3s ease-in-out;
+		}
+		.images .tab img:hover {
+			transform: scale(1.2); /* Enlarge the image on hover */
+			border-color: white; /* Change the border color on hover */
+		  }
+	  
+		.images .tab h2{
+			text-align: center;
+			animation: fadeInUp 1s ease-out; color:green; font-size:30px;
+		}
+        h1{
+            text-align: center;
+            color: white;
+            background-color: black;
+        }
+		.navigation a{
+			position: relative;
+			font-size: 1.1em;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			margin-left: 40px;
+		}
+		.navigation a::after{
+			content: '';
+			position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100px;
+            height: 3px;
+            background:#008000;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: transform .5s;
+		}
+		.navigation a:hover::after{
+			transform: scaleX(1);
+		}
+		.navigation .btnLogin-popup{
+			width: 130px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #f6f1ef;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: .5s;
+		}
+		.navigation .btnLogin-popup:hover{
+			background: #e8e4e4;
+            color: #f7f4f6;
+		}
+		footer{
+			font-size: 1rem;
+			background-color: #bab8c3;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 8rem;
+			color: rgb(7, 7, 7);
+			text-align: center;
+		}
+		
+		@keyframes fadeInUp {
+			from {
+			  opacity: 0;
+			  transform: translateY(20px);
+			}
+			to {
+			  opacity: 1;
+			  transform: translateY(0);
+			}
+		  }
+    </style>
+    <header>
+        <div class="main">
+			<ul>
+				<nav class="navigation">
+					<li><a href="{{ url_for('home') }}">Home</a></li>
+					<li><a href="{{ url_for('button') }}">Predict</a></li>
+					<li><a href="{{ url_for('analyse') }}">Analysis</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+			    </nav>
+
+			</ul>
+			<div class="main">
+				<div class="logo">
+					<img src="static\image\logochange.png"style="width:250px">
+				</div>
+		</div>
+    </header>
+    <title>Analyse of CO2 Emission</title>
+    <h1 style=" animation: fadeInUp 1s ease-out; color:green; font-size:50px;">Analyse of CO2 Emission</h1>
+</head>
+<body>
+    <div class="images">
+		 
+		<div class="tab">	
+			<div class="rotate-animation">
+        <img src="static\image\corr.png"  >
+		<h2>Corelation of the Parameters</h2>
+			</div>
+		</div>
+		 <br>
+		<div class="tab">	
+			<img src="static\image\maketype.png" >
+			<h2>Make Type Vs CO2 Emission</h2>
+			</div>
+			<div class="tab">	
+				<img src="static\image\averagecategorical.png"class="rotate-animation" >
+				<h2>Average categorical Values VS  CO2 Emission</h2>
+			</div>
+			<div class="tab">	
+					<img src="static\image\download.png" class="rotate-animation" >
+					<h2>CO2 Emission VS Aggregarte Functions</h2>
+			</div>
+			<div class="tab">	
+				<img src="static\image\mean.png"class="rotation-animation" >
+				<h2>CO2 Emission VS Aggregarte Functions</h2>
+			</div>
+			<div class="tab">	
+				<img src="static\image\density.png" calss='rotation-animation'>
+				<h2>Density VS CO2 Emission</h2>
+			</div>
+</div>
+    
+</body>
+
+
+</html>

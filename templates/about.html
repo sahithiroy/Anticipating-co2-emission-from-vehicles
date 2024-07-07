@@ -1,0 +1,240 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        html{
+			font-size: 60%;
+			/* overflow: hidden; */
+		}
+		/* this is body design */
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: Century Gothic;
+            color:White;
+		}
+		 
+		ul{
+			float:right;
+			list-style-type: none;
+			margin-top: 30px;
+			margin-right:60px ;
+		}
+		ul li{
+			display: inline-block;
+		}
+		ul li a{
+			text-decoration: none;
+	        color: #f5f1f1;
+	        padding: 5px 20px;
+	        border: 1px solid transparent;
+	        transition: 0.5s ease;
+		}
+		ul li a{
+			text-decoration: none;
+	        color: #f5f1f1;
+			padding: 5px 20px;
+			border: 1px solid transparent;
+			transition: 0.5s ease;
+		}
+		ul li a:hover{
+			background-color: #f4f3f3;
+			color: #000;
+		}
+		ul li.active a{
+			background-color:#fff;
+	        color: #000;
+		}
+       body{
+        background-color: black;
+       }
+	   @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family: Century Gothic;
+			box-sizing: border-box;
+			font-family: 'Poppins',sans-serif;
+			text-decoration: none;
+			scroll-behavior: smooth;
+		}
+        .navigation a{
+			position: relative;
+			font-size: 1.1em;
+			color: #fff;
+			text-decoration: none;
+			font-weight: 500;
+			margin-left: 40px;
+		}
+		.navigation a::after{
+			content: '';
+			position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100px;
+            height: 3px;
+            background: #008000;
+            border-radius: 5px;
+            transform: scaleX(0);
+            transition: transform .5s;
+		}
+		.navigation a:hover::after{
+			transform: scaleX(1);
+		}
+		.navigation .btnLogin-popup{
+			width: 130px;
+            height: 50px;
+            background: transparent;
+            border: 2px solid #fff;
+            outline: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1.1em;
+            color: #f6f1ef;
+            font-weight: 500;
+            margin-left: 40px;
+            transition: .5s;
+		}
+		.navigation .btnLogin-popup:hover{
+			background: #e8e4e4;
+            color: #f7f4f6;
+		}
+        footer{
+			font-size: 1rem;
+			background-color: #bab8c3;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 8rem;
+			color: rgb(7, 7, 7);
+			text-align: center;
+		}
+       
+        .block-container {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ccc;
+            color: #000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .block-container h1 {
+            font-size: 30px;
+            padding: 5px;
+            color: green;
+        }
+
+        .block-container p {
+            font-size: 15px;
+            color: #000;
+            line-height: 1.5;
+        }
+
+        .left-block,
+        .right-block {
+            flex: 1;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            color: #000;
+        }
+		 
+     .left-block h2{
+		color:green;
+		font-size:15px;
+	 }
+        
+    </style>
+    <header>
+        <div class="main">
+			<ul>
+				<nav class="navigation">
+					<li><a href="{{ url_for('home') }}">Home</a></li>
+					<li><a href="{{ url_for('button') }}">Predict</a></li>
+					<li><a href="{{ url_for('analyse') }}">Analysis</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+			    </nav>
+
+			</ul>
+			<div class="main">
+				<div class="logo">
+					<img class='center-img' src="static\image\logochange.png" style="width:250px">
+				</div>
+		</div>
+    </header>
+     
+</head>
+<body>
+	<div style="text-align: center;">
+	<img class='center-image' src="static\image\ima.jpg" style="width:600px ">
+	</div>
+	<br>
+    <div class='block-container'>
+    <div class='left-block'>
+	 <h1>About 	CO2 Emission by vehicles</h1>
+     <br>
+     <p> 1.80 metric tonnes of CO 2 are emitted by citizens in India, which is highly detrimental to all living beings. Climate change and glacier melting are the results of CO 2 emissions. Based on factors including engine size, fuel type, cylinder count, vehicle class, and model, CO2 emissions are anticipated.we committed ourselves to help People compensate for the CO2 emission stemming from their websites and share the good news with their users.</p>
+    </div>
+</div>
+    <div>
+        <br>
+        <div class='block-container'>
+            <div class='right-block'>
+            <h1>What is CO2 emission prediction website?</h1>
+            <br>
+            <p> CO2 Emission Website is a global climate initiative because CO2 emissions are a global problem. Modeling and predicting CO2 emission is very important for forecasting future values of CO2 emission. </p>
+           </div>
+        </div>
+        <br>
+		<div class='block-container'>
+            <div class='left-block'>
+            <h2>Vehicle Class</h2>
+            <br> <p>Compact, minicompact, and subcompact cars are could be categorized as "Hatchbacks".
+			</p>
+			<p>SUV - Small, SUV - Standard, and Minivan are could be categorized as" SUVs". </p><br>
+			<p>MID-SIZE, FULL-SIZE, and STATION WAGON - MID-SIZE could be categorized as " Sedans"</p><br>
+			<br>
+			<h2>Vehicle Model</h2>
+			<br>
+			<p>Bugatti, Porsche, Maserati, Aston Martin, Lamborghini, Jaguar, and SRT are could be categorized as "sports"</p><br>
+			<p>
+				Alfa Romeo, Audi, BMW, Buick, Cadillac, Chrysler, Dodge, GMC, Infiniti, Jeep, Land Rover, Lexus, Mercedes-Benz, Mini, Smart, and Volvo are could be considerd as "premium"</p>
+				<br>
+			<p>Acura, Bentley, Lincoln, Rolls-Royce, and Genesis are could be categorized as "Luxury"</p><br>
+			<p>
+				Chevrolet, Fiat, Ford, Kia, Honda, Hyundai, Mazda, Mitsubishi, Nissan, Ram, Scion, Subaru, Toyota, and Volkswagen are could be categorized as "General"</p><br>
+				<h2>Transmission</h2>
+				<p> 
+					A = Automatic
+					AM = Automated manual
+					AS = Automatic with select shift
+					AV = Continuously variable
+					M = Manual
+					3 - 10 = Number of gears</p>
+        </div>
+		 
+	</div>
+
+        <div class='block-container'>
+            <div class='left-block'>
+            <h1></h1>
+            <br> <p>The goal of CO2 emision Website is to call more attention to the CO2 emissions of vehicles. At the same time we want to create concrete projects that have an impact - socially and environmentally. we reduce CO2 and improve the lives of thousands of families in India by cooperating with local NGOs on introducing energy efficient stoves. </p>
+           </div>
+        </div>
+        <br>
+	<footer>
+		<h3>Copyright &copy; 2024 by Obula Saraswathi All Rights Reserved.</h3>
+	</footer>
+   </div>
+</body>
+
+
+</html>
+ 
